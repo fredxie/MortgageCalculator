@@ -98,7 +98,7 @@ public class MortgageCalculator {
         double owningCost = totalPaymentToDate - (param.totalPrice - totalPrincipalLeft);
         
         PrintDelimiter();
-        System.out.println("APR Rate: " + new DecimalFormat("##.####").format(param.apr));
+        System.out.println("APR Rate: " + new DecimalFormat("##.######").format(param.apr));
         System.out.println("Total Paid: " + new DecimalFormat("##.##").format(totalPaymentToDate));
         System.out.println("  -- Down Payment: " + new DecimalFormat("##.##").format(param.downPayment));
         System.out.println("  -- Total Principal: " + new DecimalFormat("##.##").format(totalPrincipalPaymentToDate));

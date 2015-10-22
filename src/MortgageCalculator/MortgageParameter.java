@@ -5,7 +5,6 @@
  */
 package MortgageCalculator;
 
-import java.text.DecimalFormat;
 import java.util.HashMap;
 import static MortgageCalculator.MortgageCalculator.DELIMITER;
 
@@ -60,7 +59,7 @@ public class MortgageParameter {
 //        System.out.println("MONTH   |   INTEREST PAYMENT");
         for (int month = 1; month <= loanMonthLength; month++) {
             if (!interestPaymentMap.containsKey(month)) {
-                double previousTotalInterestPayment = GetInterestPaymentSum(1, month);
+                double previousTotalInterestPayment = GetInterestPaymentSum(1, (month -1));
                 double currentMonthInterestPayment = (mortgageAmount - (month - 1) * monthlyPayment + previousTotalInterestPayment) * monthlyInterestRate;
 
                 interestPaymentMap.put(month, currentMonthInterestPayment);
